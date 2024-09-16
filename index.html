@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KC Travel Blog</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div class="container">
+        <h1>KC Travel Blog</h1>
+        <div class="login-section">
+            <div class="login-form">
+                <form>
+                    <div class="input-group">
+                        <label for="username" class="input-icon"></label>
+                        <input type="text" id="username" placeholder="Username or email" required>
+                    </div>
+
+                    <div class="input-group password-group">
+                        <label for="password" class="input-icon"></label>
+                        <input type="password" id="password" placeholder="Password" required>
+                        <span class="toggle-password" onclick="togglePassword()">👁️</span>
+                    </div>
+
+                    <div class="remember-forgot">
+                        <label>
+                            <input type="checkbox"> Remember me
+                        </label>
+                        <a href="#">Forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="login-btn">LOGIN</button>
+
+                    <div class="register-now">
+                        <a href="#">Register now</a>
+                    </div>
+
+                    
+                    <strong>Visit me at;</strong>
+                    
+
+                    <button type="button" class="social-btn facebook-btn">
+                    FACEBOOK
+                    </button>
+
+                    <button type="button" class="social-btn twitter-btn">
+                    TWITTER
+                    </button>
+
+                    <button type="button" class="social-btn instagram-btn">
+                    INSTAGRAM
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="image-section">
+            <h1>Travel the world<br>with me.</h1>
+            <p>-Kaizer Louie Cabillo</p>
+            <img src="langit.jpg" alt="Background">
+        </div>
+    </div>
+
+    <script>
+        function togglePassword() {
+            const passwordField = document.getElementById('password');
+            const toggleIcon = document.querySelector('.toggle-password');
+            
+            if (passwordField.type === 'password') {
+                passwordField.type = 'text';
+                toggleIcon.textContent = '🙈'; 
+            } else {
+                passwordField.type = 'password';
+                toggleIcon.textContent = '👁️';  
+            }
+        }
+    </script>
+</body>
+</html>
